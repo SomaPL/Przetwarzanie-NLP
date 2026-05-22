@@ -1,0 +1,2 @@
+dataset,embedding,model,accuracy,macro_f1
+demo,tfidf,logreg,0.75,0.666667

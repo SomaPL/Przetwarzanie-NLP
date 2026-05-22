@@ -1,3 +1,4 @@
+import asyncio
 import os
 import shlex
 from dotenv import load_dotenv
@@ -5,6 +6,7 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 
 from classifier import predict_text_class
+from lab2_experiments import parse_classify_command, run_dataset_experiment
 from nlp import (
     bag_of_words,
     clean_text,
@@ -59,6 +61,7 @@ async def start_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
         '/task plot_top_words "To był bardzo interesujący wykład." "neutralny"\n\n'
         '/full_pipeline "System działa szybko, ale interfejs wymaga poprawy." "neutralny"\n'
         '/classifier "To był fantastyczny film"\n'
+        '/classify dataset=20news_group method=logreg gridsearch=false run=1\n'
         "/stats"
     )
 
@@ -296,6 +299,29 @@ async def stats_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
         await msg.reply_text(f"Błąd w /stats: {e}")
 
 
+async def classify_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    msg = update.effective_message
+    if not msg or not msg.text:
+        return
+
+    try:
+        config = parse_classify_command(msg.text)
+    except Exception as e:
+        await msg.reply_text(f"Błędna składnia /classify: {e}")
+        return
+
+    await msg.reply_text(
+        "Startuję eksperyment Lab 2. To może potrwać kilka minut, "
+        "szczególnie dla method=all albo gridsearch=true."
+    )
+
+    try:
+        report = await asyncio.to_thread(run_dataset_experiment, config)
+        await msg.reply_text(report.as_message())
+    except Exception as e:
+        await msg.reply_text(f"Błąd w /classify: {e}")
+
+
 def main() -> None:
     if not TOKEN:
         raise RuntimeError("Brak tokena bota. Dodaj BOT_TOKEN do pliku .env")
@@ -307,6 +333,7 @@ def main() -> None:
     app.add_handler(CommandHandler("full_pipeline", full_pipeline_handler))
     app.add_handler(CommandHandler("classifier", classifier_handler))
     app.add_handler(CommandHandler("stats", stats_handler))
+    app.add_handler(CommandHandler("classify", classify_handler))
 
     print("Bot działa...")
     app.run_polling()

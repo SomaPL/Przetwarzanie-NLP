@@ -1,0 +1,47 @@
+dataset=demo embedding=tfidf model=logreg class=car
+stations: 0.225851
+batteries: 0.225851
+need: 0.225851
+electric: 0.225851
+charging: 0.225851
+cars: 0.225851
+much: 0.224790
+engine: 0.224790
+made: 0.224790
+repair: 0.224790
+
+dataset=demo embedding=tfidf model=logreg class=computer
+update: 0.234817
+software: 0.234817
+security: 0.234817
+fixed: 0.234817
+bug: 0.234817
+network: 0.234817
+server: 0.234538
+new: 0.234538
+database: 0.234538
+application: 0.234538
+
+dataset=demo embedding=tfidf model=logreg class=space
+telescope: 0.235465
+star: 0.235465
+planet: 0.235465
+distant: 0.235465
+found: 0.235465
+near: 0.235465
+science: 0.209451
+satellites: 0.209451
+rockets: 0.209451
+space: 0.209451
+
+dataset=demo embedding=tfidf model=logreg class=sport
+the: 0.307827
+tournament: 0.217123
+watched: 0.217123
+tactics: 0.217123
+stadium: 0.217123
+changed: 0.217123
+before: 0.217123
+at: 0.217123
+game: 0.217123
+final: 0.217123
