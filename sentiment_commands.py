@@ -50,6 +50,17 @@ def help_text() -> str:
         '/analyze_entities text="Elon Musk posiada firmę Tesla w Austin." link=true\n'
         '/knowledge_graph text="Elon Musk posiada firmę Tesla w Austin."\n'
         '/language_detect text="To jest przykładowy tekst"\n\n'
+        "Lab 5:\n"
+        '/ask "Czy dziś jest dobra pogoda na spacer w Warszawie?"\n'
+        '/ask "Porównaj pogodę w Warszawie i Paryżu"\n'
+        '/ask "Czy pogoda w Warszawie jest typowa dla maja?"\n'
+        '/weather city="Warszawa"\n'
+        '/web query="CEO Tesli"\n'
+        '/calc expression="2 + 2 * 5"\n'
+        '/knowledge query="Co robi Lab 5?"\n'
+        '/vision image_path="C:\\\\sciezka\\\\obraz.png"\n'
+        "/tools\n"
+        "/tool_history\n\n"
         "Metody sentymentu:\n"
         f"{', '.join(SENTIMENT_METHODS)}"
     )

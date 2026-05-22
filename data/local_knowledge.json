@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Projekt NLP",
+    "tags": ["nlp", "telegram", "bot", "laboratoria"],
+    "content": "Projekt rozwija bota Telegram przez kolejne laboratoria: przetwarzanie tekstu, klasyfikację, sentyment, NER, tłumaczenie, podsumowania i tool calling."
+  },
+  {
+    "title": "Lab 5",
+    "tags": ["ollama", "tool calling", "function calling"],
+    "content": "Laboratorium 5 dotyczy lokalnego LLM w Ollama, który wybiera narzędzia takie jak pogoda, web search, vision, kalkulator i lokalna baza wiedzy."
+  },
+  {
+    "title": "Ollama",
+    "tags": ["llm", "local model", "api"],
+    "content": "Ollama udostępnia lokalne API HTTP, z którego bot korzysta do rozmowy z modelem oraz do analizy obrazów przez modele vision."
+  }
+]

@@ -16,6 +16,16 @@ from lab4_commands import (
     summarize_handler,
     translate_handler,
 )
+from lab5_commands import (
+    ask_handler,
+    calc_handler,
+    knowledge_handler,
+    tool_history_handler,
+    tools_handler,
+    vision_handler,
+    weather_handler,
+    web_handler,
+)
 from lab2_experiments import parse_classify_command, run_dataset_experiment
 from sentiment_commands import (
     add_sentiment_handler,
@@ -90,6 +100,11 @@ async def start_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
         '/nel text="Steve Jobs" language=en\n'
         '/translate text="The quick brown fox jumps over the lazy dog" target_lang=pl\n'
         '/summarize text="Długi tekst..." summary_type=abstractive length=medium\n'
+        '/ask "Czy dziś jest dobra pogoda na spacer w Warszawie?"\n'
+        '/weather city="Warszawa"\n'
+        '/web query="CEO Tesli"\n'
+        '/calc expression="2+2*5"\n'
+        '/tools\n'
         "/stats"
     )
 
@@ -376,6 +391,14 @@ def main() -> None:
     app.add_handler(CommandHandler("analyze_entities", analyze_entities_handler))
     app.add_handler(CommandHandler("knowledge_graph", knowledge_graph_handler))
     app.add_handler(CommandHandler("language_detect", language_detect_handler))
+    app.add_handler(CommandHandler("ask", ask_handler))
+    app.add_handler(CommandHandler("tools", tools_handler))
+    app.add_handler(CommandHandler("tool_history", tool_history_handler))
+    app.add_handler(CommandHandler("weather", weather_handler))
+    app.add_handler(CommandHandler("web", web_handler))
+    app.add_handler(CommandHandler("calc", calc_handler))
+    app.add_handler(CommandHandler("knowledge", knowledge_handler))
+    app.add_handler(CommandHandler("vision", vision_handler))
 
     print("Bot działa...")
     app.run_polling()

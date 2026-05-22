@@ -270,3 +270,69 @@ lab4results/lab4_summaries.csv
 lab4results/lab4_translations.csv
 lab4plots/knowledge_graph_<timestamp>.png
 ```
+
+## Laboratorium 5
+
+Lab 5 dodaje function calling / tool calling dla lokalnego modelu w Ollama. Główna komenda:
+
+```text
+/ask "pytanie użytkownika"
+```
+
+Model dostaje listę narzędzi i może wywołać jedno lub kilka z nich. Jeśli lokalny model nie zwróci natywnego `tool_calls`, bot używa prostego fallbacku heurystycznego, żeby nadal dało się pokazać scenariusze laboratoryjne.
+
+Dostępne narzędzia:
+
+```text
+web_search(query)
+get_weather(city)
+simple_calculator(expression)
+local_knowledge(query)
+analyze_image(image_path, prompt)
+```
+
+Komendy testowe:
+
+```text
+/tools
+/tool_history
+/ask "Czy dziś jest dobra pogoda na spacer w Warszawie?"
+/ask "Porównaj pogodę w Warszawie i Paryżu"
+/ask "Czy pogoda w Warszawie jest typowa dla maja?"
+/weather city="Warszawa"
+/web query="CEO Tesli"
+/calc expression="2 + 2 * 5"
+/knowledge query="Co robi Lab 5?"
+/vision image_path="C:\sciezka\obraz.png"
+```
+
+Narzędzia używają:
+
+```text
+Web Search: Wikipedia API + Wikidata API
+Weather: Open-Meteo API
+Vision: lokalny model vision w Ollama
+Calculator: lokalna bezpieczna funkcja Python
+Local Knowledge: data/local_knowledge.json
+```
+
+Domyślne modele Ollama:
+
+```text
+OLLAMA_MODEL=llama3.2:3b
+OLLAMA_VISION_MODEL=llava:latest
+```
+
+Możesz je zmienić przed uruchomieniem bota:
+
+```powershell
+$env:OLLAMA_MODEL="nazwa_modelu_tekstowego"
+$env:OLLAMA_VISION_MODEL="nazwa_modelu_vision"
+python bot.py
+```
+
+Historia tool calli zapisuje się do:
+
+```text
+lab5results/tool_history.jsonl
+```
