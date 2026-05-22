@@ -1,0 +1,2 @@
+source_lang,target_lang,source_text,translation,models
+en,pl,The quick brown fox jumps over the lazy dog,Szybki brązowy lisek skoczy nad leniwym psem,Helsinki-NLP/opus-mt-en-ine

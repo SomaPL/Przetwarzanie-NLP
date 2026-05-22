@@ -40,6 +40,16 @@ def help_text() -> str:
         "/compare dataset=custom methods=rule,nb,rf\n"
         '/add_sentiment "Obsługa była poprawna" "neutralny"\n'
         "/models\n\n"
+        "Lab 4:\n"
+        '/ner method=spacy text="Steve Jobs założył Apple."\n'
+        '/ner method=stanza text="Elon Musk pracuje nad xAI w Austin."\n'
+        '/nel text="Steve Jobs" language=en\n'
+        '/ned entity="Apple" context="Steve Jobs założył Apple w Kalifornii" language=en\n'
+        '/translate text="The quick brown fox jumps over the lazy dog" target_lang=pl\n'
+        '/summarize text="długi tekst" summary_type=abstractive length=medium\n'
+        '/analyze_entities text="Elon Musk posiada firmę Tesla w Austin." link=true\n'
+        '/knowledge_graph text="Elon Musk posiada firmę Tesla w Austin."\n'
+        '/language_detect text="To jest przykładowy tekst"\n\n'
         "Metody sentymentu:\n"
         f"{', '.join(SENTIMENT_METHODS)}"
     )
@@ -170,4 +180,3 @@ async def models_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
             f"(tokenizer: {row['tokenizer']}, encoder: {row['encoder']})"
         )
     await msg.reply_text("\n".join(lines))
-

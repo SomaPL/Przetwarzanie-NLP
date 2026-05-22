@@ -1,0 +1,23 @@
+entity,language,context,rank,label,wikidata_id,description,wikipedia_url,confidence
+Steve Jobs,en,,1,Steve Jobs,Q19837,American entrepreneur; co-founder of Apple Inc. (1955–2011),https://en.wikipedia.org/wiki/Steve_Jobs,0.75
+Steve Jobs,en,,2,Steve Jobs,Q18754959,2015 film directed by Danny Boyle,https://en.wikipedia.org/wiki/Steve_Jobs_%28film%29,0.67
+Steve Jobs,en,,3,Steve Jobs,Q16460065,1st Simon & Schuster hardcover edition,,0.59
+Steve Jobs,en,,4,Steve Jobs,Q109983309,person identified in the Museu da Pessoa collection,,0.51
+Steve Jobs,en,,5,Steve Jobs,Q625645,2011 authorized biography by Walter Isaacson,https://en.wikipedia.org/wiki/Steve_Jobs_%28book%29,0.43
+Steve Jobs,en,,6,Steve Jobs,Q28941414,2015 paperback edition published by Simon & Schuster,,0.35
+elon musk,en,,1,Elon Musk,Q317521,businessman and entrepreneur (born 1971),https://en.wikipedia.org/wiki/Elon_Musk,0.75
+elon musk,en,,2,Elon Musk,Q122380405,2023 authorized biography by Walter Isaacson,https://en.wikipedia.org/wiki/Elon_Musk_%28Isaacson_book%29,0.51
+elon musk,en,,3,Elon Musk,Q123134390,2023 single by Shallipopi,,0.43
+elon musk,en,,4,"Elon Musk: Tesla, SpaceX a hledání fantastické budoucnosti",Q121968158,book edition published in 2015,,0.37
+elon musk,en,,5,acquisition of Twitter by Elon Musk,Q111725317,business acquisition in 2022,https://en.wikipedia.org/wiki/Acquisition_of_Twitter_by_Elon_Musk,0.29
+elon musk,en,,6,Elon Musk's Tesla Roadster,Q46845259,sports car launched into space in 2018,https://en.wikipedia.org/wiki/Elon_Musk%27s_Tesla_Roadster,0.05
+Apple,en,Steve Jobs założył Apple w Kalifornii,1,apple,Q89,edible fruit of the apple tree,https://en.wikipedia.org/wiki/Apple,0.79
+Elon Musk,pl,Elon Musk posiada firmę Tesla oraz xAI w Austin.,1,Elon Musk,Q317521,inżynier i przedsiębiorca,https://pl.wikipedia.org/wiki/Elon_Musk,0.75
+Elon Musk,pl,Elon Musk posiada firmę Tesla oraz xAI w Austin.,2,Elon Musk,Q123134390,2023 single by Shallipopi,,0.67
+Elon Musk,pl,Elon Musk posiada firmę Tesla oraz xAI w Austin.,3,Elon Musk,Q122380405,2023 authorized biography by Walter Isaacson,https://en.wikipedia.org/wiki/Elon_Musk_%28Isaacson_book%29,0.59
+Tesla,pl,Elon Musk posiada firmę Tesla oraz xAI w Austin.,1,tesla,Q163343,jednostka indukcji magnetycznej w układzie SI,https://pl.wikipedia.org/wiki/Tesla_%28jednostka%29,0.75
+Tesla,pl,Elon Musk posiada firmę Tesla oraz xAI w Austin.,2,Tesla,Q1428953,amerykański zespół rockowy,https://pl.wikipedia.org/wiki/Tesla_%28zesp%C3%B3%C5%82_muzyczny%29,0.59
+Tesla,pl,Elon Musk posiada firmę Tesla oraz xAI w Austin.,3,Tesla,Q1548225,Czech manufacturer of electronical and electrical equipment (est.1991),https://pl.wikipedia.org/wiki/Tesla_%28czechos%C5%82owackie_przedsi%C4%99biorstwo%29,0.43
+Austin,pl,Elon Musk posiada firmę Tesla oraz xAI w Austin.,1,Austin,Q16559,"miasto w USA, stolica Teksasu",https://pl.wikipedia.org/wiki/Austin,0.75
+Austin,pl,Elon Musk posiada firmę Tesla oraz xAI w Austin.,2,Austin,Q780944,"city in, and the county seat of, Mower County, Minnesota, United States",https://pl.wikipedia.org/wiki/Austin_%28Minnesota%29,0.67
+Austin,pl,Elon Musk posiada firmę Tesla oraz xAI w Austin.,3,Austin,Q780883,nazwisko,https://en.wikipedia.org/wiki/Austin_%28surname%29,0.59

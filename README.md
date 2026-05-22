@@ -179,3 +179,94 @@ max_len=300
 Dla każdego wariantu można uruchomić ten sam model i porównać `accuracy`, `macro_f1` oraz wykres historii uczenia. Większe `max_len` zachowuje więcej słów z tekstu, ale zwiększa czas treningu.
 
 Uwaga: `transformer` przy pierwszym użyciu pobiera model `cardiffnlp/twitter-xlm-roberta-base-sentiment`. `stanza` wymaga pobranego modelu języka polskiego komendą z sekcji instalacji.
+
+## Przygotowanie do Laboratorium 4
+
+Lab 4 będzie korzystał głównie z internetowego linkowania encji:
+
+```text
+Wikidata API / Wikidata SPARQL
+Wikipedia API
+Hugging Face models
+Ollama lokalnie przez http://localhost:11434
+```
+
+Lokalna baza wiedzy może zostać dodana tylko jako zapasowe źródło, ale główna ścieżka będzie online.
+
+Dodatkowe biblioteki dopisane do `requirements.txt`:
+
+```text
+langdetect
+networkx
+sentencepiece
+sacremoses
+wikipedia-api
+SPARQLWrapper
+```
+
+Po aktualizacji zależności uruchom:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+```
+
+Ollama musi być uruchomiona lokalnie, a wybrany model powinien odpowiadać w terminalu przez:
+
+```powershell
+ollama run nazwa_modelu
+```
+
+## Laboratorium 4
+
+Nowe komendy:
+
+```text
+/ner method=<spacy|stanza> text="tekst"
+/nel text="tekst" language=<en|pl>
+/ned entity="nazwa" context="tekst kontekstu" language=<en|pl>
+/translate text="tekst" target_lang=<en|pl|de|fr|es>
+/summarize text="tekst" summary_type=<extractive|abstractive|bullets> length=<short|medium|long>
+/analyze_entities text="tekst" link=<true|false>
+/knowledge_graph text="tekst"
+/language_detect text="tekst"
+```
+
+Przykłady:
+
+```text
+/ner method=spacy text="Steve Jobs, założyciel Apple'a, urodził się w San Francisco."
+/ner method=stanza text="Elon Musk posiada firmę Tesla oraz xAI w Austin."
+/nel text="Steve Jobs" language=en
+/ned entity="Apple" context="Steve Jobs założył Apple w Kalifornii" language=en
+/translate text="The quick brown fox jumps over the lazy dog" target_lang=pl
+/summarize text="Tutaj wklej dłuższy tekst" summary_type=abstractive length=medium
+/summarize text="Tutaj wklej dłuższy tekst" summary_type=bullets length=short
+/analyze_entities text="Elon Musk posiada firmę Tesla oraz xAI w Austin." link=true
+/knowledge_graph text="Elon Musk posiada firmę Tesla oraz xAI w Austin."
+/language_detect text="To jest przykładowy tekst"
+```
+
+NER działa przez `spaCy` albo `Stanza`. NEL/NED korzysta z Wikidata i Wikipedii przez internet. Tłumaczenie korzysta z modeli Helsinki-NLP/Opus-MT przez `transformers`. Dla par bez bezpośredniego modelu, np. `pl -> de`, bot tłumaczy przez angielski: `pl -> en -> de`.
+
+Podsumowania są generowane przez lokalne API Ollama:
+
+```text
+http://localhost:11434/api/generate
+```
+
+Domyślny model można zmienić zmienną środowiskową:
+
+```powershell
+$env:OLLAMA_MODEL="nazwa_modelu"
+```
+
+Wyniki Lab 4 są zapisywane do:
+
+```text
+lab4results/lab4_entities.csv
+lab4results/lab4_entity_links.csv
+lab4results/lab4_summaries.csv
+lab4results/lab4_translations.csv
+lab4plots/knowledge_graph_<timestamp>.png
+```

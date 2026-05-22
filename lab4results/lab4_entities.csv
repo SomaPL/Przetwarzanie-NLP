@@ -1,0 +1,18 @@
+method,language,text,entity,label,start,end
+spacy,pl,Steve Jobs założył Apple w San Francisco.,Steve Jobs,persName,0,10
+spacy,pl,Steve Jobs założył Apple w San Francisco.,Apple,orgName,19,24
+spacy,pl,Steve Jobs założył Apple w San Francisco.,San Francisco,placeName,27,40
+spacy,pl,Steve Jobs założył Apple w San Francisco.,Steve Jobs,PERSON,0,10
+spacy,pl,Steve Jobs założył Apple w San Francisco.,Apple,ORG,19,24
+spacy,pl,Steve Jobs założył Apple w San Francisco.,San Francisco,LOCATION,27,40
+spacy,pl,Steve Jobs założył Apple w San Francisco.,Steve Jobs,PERSON,0,10
+spacy,pl,Steve Jobs założył Apple w San Francisco.,Apple,ORG,19,24
+spacy,pl,Steve Jobs założył Apple w San Francisco.,San Francisco,LOCATION,27,40
+spacy,pl,Steve Jobs założył Apple.,Steve Jobs,PERSON,0,10
+spacy,pl,Steve Jobs założył Apple.,Apple,ORG,19,24
+spacy,pl,Elon Musk posiada firmę Tesla oraz xAI w Austin.,Elon Musk,PERSON,0,9
+spacy,pl,Elon Musk posiada firmę Tesla oraz xAI w Austin.,Tesla,ORG,24,29
+spacy,pl,Elon Musk posiada firmę Tesla oraz xAI w Austin.,Austin,LOCATION,41,47
+spacy,pl,Elon Musk posiada firmę Tesla oraz xAI w Austin.,Elon Musk,PERSON,0,9
+spacy,pl,Elon Musk posiada firmę Tesla oraz xAI w Austin.,Tesla,ORG,24,29
+spacy,pl,Elon Musk posiada firmę Tesla oraz xAI w Austin.,Austin,LOCATION,41,47

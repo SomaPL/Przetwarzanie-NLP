@@ -6,6 +6,16 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 
 from classifier import predict_text_class
+from lab4_commands import (
+    analyze_entities_handler,
+    knowledge_graph_handler,
+    language_detect_handler,
+    ned_handler,
+    nel_handler,
+    ner_handler,
+    summarize_handler,
+    translate_handler,
+)
 from lab2_experiments import parse_classify_command, run_dataset_experiment
 from sentiment_commands import (
     add_sentiment_handler,
@@ -76,6 +86,10 @@ async def start_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
         '/add_sentiment "Obsługa była poprawna" "neutralny"\n'
         "/models\n"
         "/help\n"
+        '/ner method=spacy text="Steve Jobs założył Apple."\n'
+        '/nel text="Steve Jobs" language=en\n'
+        '/translate text="The quick brown fox jumps over the lazy dog" target_lang=pl\n'
+        '/summarize text="Długi tekst..." summary_type=abstractive length=medium\n'
         "/stats"
     )
 
@@ -354,6 +368,14 @@ def main() -> None:
     app.add_handler(CommandHandler("add_sentiment", add_sentiment_handler))
     app.add_handler(CommandHandler("models", models_handler))
     app.add_handler(CommandHandler("help", help_handler))
+    app.add_handler(CommandHandler("ner", ner_handler))
+    app.add_handler(CommandHandler("nel", nel_handler))
+    app.add_handler(CommandHandler("ned", ned_handler))
+    app.add_handler(CommandHandler("translate", translate_handler))
+    app.add_handler(CommandHandler("summarize", summarize_handler))
+    app.add_handler(CommandHandler("analyze_entities", analyze_entities_handler))
+    app.add_handler(CommandHandler("knowledge_graph", knowledge_graph_handler))
+    app.add_handler(CommandHandler("language_detect", language_detect_handler))
 
     print("Bot działa...")
     app.run_polling()
