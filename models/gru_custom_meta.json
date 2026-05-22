@@ -1,0 +1,12 @@
+{
+  "model": "gru",
+  "dataset": "custom",
+  "max_len": 200,
+  "vocab_size": 10000,
+  "embedding_dim": 100,
+  "classes": [
+    "negatywny",
+    "neutralny",
+    "pozytywny"
+  ]
+}

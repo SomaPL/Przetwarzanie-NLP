@@ -1,6 +1,6 @@
-# Przetwarzanie NLP - Laboratorium 1/2
+# Przetwarzanie NLP - Laboratorium 1/2/3
 
-Bot Telegram do przetwarzania, klasyfikacji pojedynczych wiadomości oraz eksperymentów klasyfikacji tekstu na datasetach.
+Bot Telegram do przetwarzania, klasyfikacji pojedynczych wiadomości, eksperymentów klasyfikacji tekstu oraz analizy sentymentu.
 
 ## Wymagania
 - Python 3.11 albo 3.12
@@ -22,6 +22,7 @@ py -3.12 -m venv .venv
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 python -m spacy download pl_core_news_sm
+python -c "import stanza; stanza.download('pl')"
 ```
 
 Utwórz plik `.env` w katalogu projektu:
@@ -91,3 +92,90 @@ lab2_feature_importance.txt
 lab2_similar_words.txt
 lab2plots/
 ```
+
+## Laboratorium 3
+
+Główny dataset dla Lab 3 jest po polsku i znajduje się w pliku:
+
+```text
+sentiment_dataset.csv
+```
+
+Format:
+
+```csv
+text,label
+"Uwielbiam ten film",pozytywny
+"To był zwykły dzień",neutralny
+"Ten produkt jest fatalny",negatywny
+```
+
+Nowe komendy:
+
+```text
+/sentiment method=<metoda> text="tekst"
+/train model=<simplernn|lstm|gru> dataset=<amazon|imdb|custom>
+/compare dataset=<amazon|imdb|custom> methods=<lista_metod>
+/add_sentiment "tekst" "etykieta"
+/models
+/help
+```
+
+Przykłady:
+
+```text
+/sentiment method=rule text="To był naprawdę świetny film"
+/sentiment method=nb dataset=custom text="Produkt przyszedł uszkodzony"
+/train model=lstm dataset=custom epochs=10 max_len=200
+/compare dataset=custom methods=rule,nb,rf,textblob
+/add_sentiment "Obsługa była poprawna, ale niczym mnie nie zachwyciła" "neutralny"
+```
+
+Komenda `/add_sentiment` zapisuje cały podany tekst jako jeden rekord. Jeżeli tekst ma kilka zdań, nie jest dzielony automatycznie na osobne przykłady.
+
+Metody dostępne w `/sentiment`:
+
+```text
+rule, nb, rf, transformer, textblob, stanza, simplernn, lstm, gru
+```
+
+Modele sekwencyjne `SimpleRNN`, `LSTM` i `GRU` trzeba najpierw wytrenować komendą `/train`. Model jest zapisywany jako `.h5`, a tokenizer i encoder etykiet są zapisywane obok niego w katalogu `models/`, np.:
+
+```text
+models/lstm_custom.h5
+models/lstm_custom_tokenizer.h5
+models/lstm_custom_label_encoder.h5
+models/lstm_custom_meta.json
+```
+
+Podczas predykcji `/sentiment method=lstm ...` bot wczytuje zapisany model z pliku, zamiast trenować go od nowa.
+
+Wyniki i wykresy Lab 3:
+
+```text
+lab3results.csv
+lab3plots/train_history_lstm_custom.png
+lab3plots/confusion_lstm_custom.png
+lab3plots/compare_methods_custom.png
+lab3plots/wordcloud_pozytywny.png
+lab3plots/class_distribution_custom.png
+```
+
+Parametry treningu można zmieniać w komendzie:
+
+```text
+/train model=gru dataset=custom epochs=15 max_len=150 batch_size=32
+```
+
+Proponowane eksperymenty z długością sekwencji:
+
+```text
+max_len=80
+max_len=120
+max_len=200
+max_len=300
+```
+
+Dla każdego wariantu można uruchomić ten sam model i porównać `accuracy`, `macro_f1` oraz wykres historii uczenia. Większe `max_len` zachowuje więcej słów z tekstu, ale zwiększa czas treningu.
+
+Uwaga: `transformer` przy pierwszym użyciu pobiera model `cardiffnlp/twitter-xlm-roberta-base-sentiment`. `stanza` wymaga pobranego modelu języka polskiego komendą z sekcji instalacji.

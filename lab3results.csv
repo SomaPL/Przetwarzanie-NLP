@@ -1,0 +1,5 @@
+dataset,method,accuracy,precision,recall,macro_f1,model_path
+custom,rule,0.433333,0.683761,0.433333,0.348355,
+custom,nb,0.233333,0.244228,0.233333,0.235719,
+custom,rf,0.266667,0.300654,0.266667,0.265432,
+custom,textblob,0.333333,0.111111,0.333333,0.166667,

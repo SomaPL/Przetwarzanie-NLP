@@ -7,6 +7,14 @@ from telegram.ext import Application, CommandHandler, ContextTypes
 
 from classifier import predict_text_class
 from lab2_experiments import parse_classify_command, run_dataset_experiment
+from sentiment_commands import (
+    add_sentiment_handler,
+    compare_handler,
+    help_handler,
+    models_handler,
+    sentiment_handler,
+    train_handler,
+)
 from nlp import (
     bag_of_words,
     clean_text,
@@ -62,6 +70,12 @@ async def start_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
         '/full_pipeline "System działa szybko, ale interfejs wymaga poprawy." "neutralny"\n'
         '/classifier "To był fantastyczny film"\n'
         '/classify dataset=20news_group method=logreg gridsearch=false run=1\n'
+        '/sentiment method=rule text="To był świetny film"\n'
+        "/train model=lstm dataset=custom epochs=10 max_len=200\n"
+        "/compare dataset=custom methods=rule,nb,rf\n"
+        '/add_sentiment "Obsługa była poprawna" "neutralny"\n'
+        "/models\n"
+        "/help\n"
         "/stats"
     )
 
@@ -334,6 +348,12 @@ def main() -> None:
     app.add_handler(CommandHandler("classifier", classifier_handler))
     app.add_handler(CommandHandler("stats", stats_handler))
     app.add_handler(CommandHandler("classify", classify_handler))
+    app.add_handler(CommandHandler("sentiment", sentiment_handler))
+    app.add_handler(CommandHandler("train", train_handler))
+    app.add_handler(CommandHandler("compare", compare_handler))
+    app.add_handler(CommandHandler("add_sentiment", add_sentiment_handler))
+    app.add_handler(CommandHandler("models", models_handler))
+    app.add_handler(CommandHandler("help", help_handler))
 
     print("Bot działa...")
     app.run_polling()

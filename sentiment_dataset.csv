@@ -1,0 +1,121 @@
+text,label
+"Uwielbiam ten film, był naprawdę świetny.",pozytywny
+"Produkt działa znakomicie i spełnił moje oczekiwania.",pozytywny
+"Obsługa była bardzo miła i pomocna.",pozytywny
+"To była jedna z najlepszych decyzji zakupowych.",pozytywny
+"Aplikacja działa szybko i wygodnie.",pozytywny
+"Jestem bardzo zadowolony z jakości.",pozytywny
+"Film miał świetną muzykę i dobrą grę aktorską.",pozytywny
+"Dostawa przyszła szybko, wszystko było w porządku.",pozytywny
+"Polecam, naprawdę warto spróbować.",pozytywny
+"Ten produkt pozytywnie mnie zaskoczył.",pozytywny
+"To był zwykły dzień bez większych emocji.",neutralny
+"Produkt jest poprawny, ale niczym szczególnym się nie wyróżnia.",neutralny
+"Film był przeciętny i raczej przewidywalny.",neutralny
+"Obsługa była poprawna, ale bez większego zaangażowania.",neutralny
+"Aplikacja ma podstawowe funkcje i działa normalnie.",neutralny
+"Nie mam mocnej opinii na ten temat.",neutralny
+"Dostawa była zgodna z podanym terminem.",neutralny
+"Jakość jest adekwatna do ceny.",neutralny
+"To rozwiązanie jest wystarczające do prostych zadań.",neutralny
+"Wszystko przebiegło standardowo.",neutralny
+"Ten produkt jest fatalny i szybko się zepsuł.",negatywny
+"Film był nudny, za długi i rozczarowujący.",negatywny
+"Obsługa była niemiła i nie rozwiązała problemu.",negatywny
+"Jestem bardzo rozczarowany zakupem.",negatywny
+"Aplikacja ciągle się zawiesza i działa wolno.",negatywny
+"To była strata czasu i pieniędzy.",negatywny
+"Dostawa była opóźniona, a paczka uszkodzona.",negatywny
+"Jakość wykonania jest bardzo słaba.",negatywny
+"Nie polecam, doświadczenie było okropne.",negatywny
+"Kontakt ze wsparciem był frustrujący.",negatywny
+"Bardzo spodobała mi się jakość wykonania.",pozytywny
+"Film był ciekawy i trzymał mnie w napięciu.",pozytywny
+"Zamówienie dotarło szybciej niż się spodziewałem.",pozytywny
+"Aplikacja jest intuicyjna i przyjemna w użyciu.",pozytywny
+"Ten kurs pomógł mi lepiej zrozumieć temat.",pozytywny
+"Obsługa klienta odpowiedziała szybko i konkretnie.",pozytywny
+"Restauracja miała świetne jedzenie i miłą atmosferę.",pozytywny
+"Hotel był czysty, wygodny i dobrze położony.",pozytywny
+"Jestem pozytywnie zaskoczony działaniem produktu.",pozytywny
+"Zakup zdecydowanie spełnił moje oczekiwania.",pozytywny
+"Interfejs jest prosty, czytelny i dobrze zaprojektowany.",pozytywny
+"Ten telefon działa płynnie i ma bardzo dobrą baterię.",pozytywny
+"Książka była wciągająca od pierwszej strony.",pozytywny
+"Przesyłka była dobrze zabezpieczona.",pozytywny
+"Naprawa została wykonana profesjonalnie.",pozytywny
+"Jakość obrazu jest naprawdę bardzo dobra.",pozytywny
+"Spotkanie było owocne i dobrze zorganizowane.",pozytywny
+"Nowa wersja programu działa zauważalnie lepiej.",pozytywny
+"Ten sklep zasługuje na wysoką ocenę.",pozytywny
+"Jestem zadowolona z kontaktu i realizacji zamówienia.",pozytywny
+"Produkt jest solidny i wygląda lepiej niż na zdjęciach.",pozytywny
+"Film miał dobre tempo i świetne dialogi.",pozytywny
+"Usługa została wykonana bez żadnych problemów.",pozytywny
+"Cena jest korzystna jak na taką jakość.",pozytywny
+"Dostałem dokładnie to, czego potrzebowałem.",pozytywny
+"Bardzo doceniam szybką reakcję supportu.",pozytywny
+"Wszystko działa stabilnie i bez komplikacji.",pozytywny
+"Ten wybór okazał się bardzo trafiony.",pozytywny
+"Jestem mile zaskoczony poziomem obsługi.",pozytywny
+"Zdecydowanie wrócę do tej usługi ponownie.",pozytywny
+"Produkt dotarł zgodnie z opisem.",neutralny
+"Film miał kilka dobrych scen, ale całość była przeciętna.",neutralny
+"Aplikacja działa poprawnie, chociaż brakuje kilku funkcji.",neutralny
+"Obsługa odpowiedziała po standardowym czasie.",neutralny
+"Nie zauważyłem większych problemów ani szczególnych zalet.",neutralny
+"Zamówienie zostało zrealizowane zgodnie z regulaminem.",neutralny
+"Kurs zawiera podstawowe informacje na temat zagadnienia.",neutralny
+"Restauracja była w porządku, bez większego zachwytu.",neutralny
+"Hotel spełnił podstawowe wymagania.",neutralny
+"Cena wydaje się adekwatna do jakości.",neutralny
+"Produkt wygląda tak samo jak na zdjęciu.",neutralny
+"Nie jestem ani zadowolony, ani rozczarowany.",neutralny
+"Działanie programu jest typowe dla tego typu narzędzi.",neutralny
+"Książka była poprawna, ale raczej mnie nie porwała.",neutralny
+"Dostawa trwała tyle, ile podano w informacji.",neutralny
+"Kontakt z firmą był formalny i rzeczowy.",neutralny
+"Nowa wersja nie zmieniła wiele w codziennym użyciu.",neutralny
+"Telefon ma standardowe funkcje i przeciętną baterię.",neutralny
+"Spotkanie przebiegło zgodnie z planem.",neutralny
+"Usługa została wykonana, ale bez dodatkowych elementów.",neutralny
+"Nie mam zastrzeżeń, ale też nic mnie nie zachwyciło.",neutralny
+"Jakość obrazu jest wystarczająca do zwykłego oglądania.",neutralny
+"Zakup był normalny i bez niespodzianek.",neutralny
+"Produkt jest prosty i robi to, co powinien.",neutralny
+"Interfejs jest zrozumiały, choć mało nowoczesny.",neutralny
+"Film był do obejrzenia, ale szybko o nim zapomnę.",neutralny
+"Sklep działa standardowo jak wiele podobnych miejsc.",neutralny
+"Odpowiedź supportu była krótka, ale wystarczająca.",neutralny
+"Całe doświadczenie oceniam jako przeciętne.",neutralny
+"Nie widzę powodu do szczególnej pochwały ani krytyki.",neutralny
+"Produkt przestał działać po kilku dniach.",negatywny
+"Film był męczący i bardzo przewidywalny.",negatywny
+"Aplikacja często się zawiesza i gubi dane.",negatywny
+"Obsługa klienta zignorowała moje zgłoszenie.",negatywny
+"Zamówienie przyszło uszkodzone i niekompletne.",negatywny
+"Kurs był chaotyczny i słabo przygotowany.",negatywny
+"Restauracja miała zimne jedzenie i długi czas oczekiwania.",negatywny
+"Hotel był brudny i głośny w nocy.",negatywny
+"Jestem niezadowolony z jakości wykonania.",negatywny
+"Zakup okazał się kompletną pomyłką.",negatywny
+"Interfejs jest nieczytelny i niewygodny.",negatywny
+"Telefon działa wolno i szybko się rozładowuje.",negatywny
+"Książka była nudna i napisana bez pomysłu.",negatywny
+"Przesyłka była źle zabezpieczona.",negatywny
+"Naprawa została wykonana niedbale.",negatywny
+"Jakość obrazu jest słaba i rozmazana.",negatywny
+"Spotkanie było źle zorganizowane i bez konkretów.",negatywny
+"Nowa wersja programu wprowadziła więcej błędów.",negatywny
+"Ten sklep mnie zawiódł.",negatywny
+"Kontakt z firmą był bardzo nieprzyjemny.",negatywny
+"Produkt wygląda tanio i niezgodnie z opisem.",negatywny
+"Film miał słabe dialogi i fatalne tempo.",negatywny
+"Usługa została wykonana z dużym opóźnieniem.",negatywny
+"Cena jest zdecydowanie za wysoka jak na taką jakość.",negatywny
+"Nie dostałem tego, czego oczekiwałem.",negatywny
+"Support odpowiadał powoli i bez sensownych informacji.",negatywny
+"Program działa niestabilnie i często wyrzuca błędy.",negatywny
+"Ten wybór okazał się nietrafiony.",negatywny
+"Jestem bardzo zawiedziony poziomem obsługi.",negatywny
+"Na pewno nie skorzystam z tej usługi ponownie.",negatywny
